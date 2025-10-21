@@ -28,4 +28,9 @@ public class controller {
     public quiz getQuizById(@PathVariable Long id){
         return quizService.getQuizById(id);
     }
+
+    @GetMapping("/getQuiz")
+    public quiz getQuizByIdParam(@RequestParam("id") Long id){
+        return quizService.getQuizById(id);
+    }
 }
