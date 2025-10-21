@@ -9,8 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="APIgateway" />
         <module name="QuizService" />
-        <module name="QuestionService" />
         <module name="serviceReg" />
+        <module name="QuestionService" />
         <module name="configServer" />
       </profile>
     </annotationProcessing>
