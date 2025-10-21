@@ -26,7 +26,8 @@ public class controller {
 
     @GetMapping("/getQuiz/{id}")
     public quiz getQuizById(@PathVariable Long id){
-        return quizService.getQuizById(id);
+        quiz quiz = quizService.getQuizById(id);
+        return quiz;
     }
 
     @GetMapping("/getQuiz")

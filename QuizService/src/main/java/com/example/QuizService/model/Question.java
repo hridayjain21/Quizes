@@ -16,12 +16,11 @@ public class Question {
 
     @Override
     public String toString() {
-        // putting some changes here check these
+        //this shows whole question string
         return "Question{" +
                 "id=" + id +
                 ", question='" + question + '\'' +
                 ", quizId=" + quizId +
                 '}';
     }
-
 }
