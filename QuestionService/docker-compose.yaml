@@ -1,0 +1,14 @@
+version: '3.8'  # Specify the version of the Docker Compose file format
+
+services:       # This key is required to define your services
+  rabbitmq:
+    image: rabbitmq:4.0-management
+    container_name: rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - postgres
+
+networks:       # Define any networks you're using
+  postgres:
