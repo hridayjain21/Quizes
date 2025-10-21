@@ -1,0 +1,18 @@
+# Please fill these quickly:
+Java version:
+Spring Boot version:
+Spring Cloud version(s):
+
+Local ports:
+- Eureka (serviceReg): ______
+- API Gateway (APIgateway): ______
+- QuizService: ______
+- QuestionService: ______
+- configServer (if used): ______
+
+Inter-service calls:
+- Who calls whom (Feign/WebClient)? e.g., APIgateway -> QuizService, QuizService -> QuestionService, etc.
+
+DB / Message broker (if any):
+Build commands (e.g., mvn clean package):
+Run commands (how you start each service locally):
