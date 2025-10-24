@@ -8,11 +8,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
-
-@FeignClient(url = "http://localhost:8086/question",name = "QUESTION-SERVICE")
+@FeignClient(name = "QUESTION-SERVICE",url = "${question.service.url}")
 public interface questionClient{
-
-    @GetMapping("/allQuestions/{quizId}")
+    @GetMapping("/question/allQuestions/{quizId}")
     public List<Question> getQuestionsByQuizId(@PathVariable Long quizId);
 }
 

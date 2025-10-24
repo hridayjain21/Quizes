@@ -2,6 +2,7 @@ package com.example.QuestionService.clients;
 
 import com.example.QuestionService.model.quiz;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -12,15 +13,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 //    quiz getQuiz(@PathVariable Long id);
 //}
 
-
-
-
-
-
-
-@FeignClient(url = "http://localhost:8085/quiz",name = "QUIZ-SERVICE")
+@FeignClient(url = "${quiz.service.url}",name = "QUIZ-SERVICE")
 public interface quizClient {
-    @GetMapping("/getQuiz/{id}")
+    @GetMapping("/quiz/getQuiz/{id}")
     public quiz getQuiz(@PathVariable Long id);
 }
 
